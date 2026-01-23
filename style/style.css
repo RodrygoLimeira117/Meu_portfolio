@@ -12,23 +12,25 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+/* HEADER */
 .cabecalho {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .cabecalho__menu {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .cabecalho__menu__link {
-    font-size: 1.2rem;
-    color: #22D4FD;
     text-decoration: none;
+    color: #22D4FD;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
+/* MAIN */
 .apresentacao {
     max-width: 1200px;
     margin: 3rem auto;
@@ -42,8 +44,7 @@ body {
 .apresentacao__conteudo {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    width: 100%;
+    gap: 2rem;
 }
 
 .apresentacao__conteudo__titulo {
@@ -56,7 +57,7 @@ body {
 }
 
 .apresentacao__conteudo__paragrafo {
-    font-size: clamp(1rem, 3.5vw, 1.4rem);
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
     line-height: 1.6;
 }
 
@@ -64,11 +65,12 @@ span {
     color: #22D4FD;
 }
 
+/* BUTTONS */
 .apresentacao__botao {
     display: flex;
     flex-direction: column;
+    gap: 1.2rem;
     align-items: center;
-    gap: 1.5rem;
 }
 
 .apresentacao__botao__subtitulo {
@@ -77,15 +79,15 @@ span {
 }
 
 .apresentacao__botao__estilo {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.9rem;
+    border: 2px solid #22D4FD;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    width: 100%;
-    max-width: 350px;
-    padding: 1rem;
-    border: 2px solid #22D4FD;
-    border-radius: 8px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -96,27 +98,28 @@ span {
     background-color: #1a1a1a;
 }
 
+/* IMAGE */
 .apresentacao__imagem {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     height: auto;
 }
 
+/* FOOTER */
 .rodape {
-    margin-top: 3rem;
-    padding: 1.5rem;
     background-color: #22D4FD;
     color: #000;
     text-align: center;
+    padding: 1.2rem;
     font-weight: 600;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-
     .apresentacao {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 2.5rem;
     }
 
     .apresentacao__conteudo {
@@ -124,7 +127,6 @@ span {
     }
 
     .apresentacao__imagem {
-        max-width: 280px;
+        max-width: 260px;
     }
-
 }
