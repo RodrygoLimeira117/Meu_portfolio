@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - José Rodrigo Limeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* SETUP GERAL E CORES */
+        :root {
+            --bg-dark: #050505;
+            --bg-page: #121212;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+            --accent-green: #10b981;
+            --accent-blue: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Urbanist', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* ESTRUTURA DAS SEÇÕES */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        h1, h2, h3, h4 { color: var(--text-main); font-weight: 700; }
+        
+        span.highlight { color: var(--accent-green); }
+
+        .section-title {
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 20px;
+            margin-bottom: 50px;
+            max-width: 700px;
+        }
+
+        /* HEADER / HERO SECTION */
+        header {
+            background-color: var(--bg-dark);
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 4px solid;
+            border-image: linear-gradient(90deg, transparent, var(--accent-blue), var(--accent-green), transparent) 1;
+        }
+
+        header h1 {
+            font-size: 64px;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 24px;
+            color: #94a3b8;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 28px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--accent-green); }
+
+        /* GRID DE CARDS (PROJETOS E HABILIDADES) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .tile {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 35px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+            border-color: var(--accent-green);
+        }
+
+        .tile .title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tile .main-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .tile .icon-container {
+            align-items: center;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+            border-radius: 12px;
+            color: #fff;
+            display: flex;
+            font-size: 22px;
+            height: 50px;
+            justify-content: center;
+            width: 50px;
+            flex-shrink: 0;
+        }
+
+        .tile p.tile-content {
+            color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        /* FORMAÇÃO E SOBRE */
+        .text-block {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 25px;
+        }
+
+        .text-block h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--accent-green);
+        }
+
+        .text-block p, .text-block ul {
+            font-size: 18px;
+            color: var(--text-muted);
+        }
+
+        .text-block ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .text-block ul li { margin-bottom: 8px; }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: var(--bg-dark);
+            color: #94a3b8;
+            font-size: 18px;
+        }
+
+        /* RESPONSIVIDADE PARA CELULAR */
+        @media (max-width: 768px) {
+            header h1 { font-size: 48px; }
+            header p { font-size: 20px; }
+            .section-title { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>José Rodrigo <span class="highlight">Araujo Limeira</span></h1>
+        <p>Desenvolvedor Back-end | Java & Spring Boot | Nuvem AWS</p>
+        <div class="social-links">
+            <a href="https://github.com/RodrygoLimeira117" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rodrigo-limeira-eng/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:rodrigolimeira2002@outlook.com" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://wa.me/5587991959993" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2 class="section-title">Resumo <span class="highlight">Profissional</span></h2>
+        <div class="text-block">
+            <p>Desenvolvedor focado em back-end com experiência prática na construção de APIs, modelagem de banco de dados e integração de sistemas. Proficiente em <strong>Java (Spring Boot)</strong> e <strong>Python</strong>, com vivência na criação de soluções completas.</p>
+            <br>
+            <p>Possuo experiência focada em arquiteturas modernas envolvendo automação de análises, contratos inteligentes (Web3) e implantação de serviços em ambientes de computação em nuvem <strong>(AWS)</strong>. Busco aplicar meus conhecimentos técnicos na construção de soluções scaláveis, eficientes e inovadoras.</p>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2 class="section-title">Projetos em <span class="highlight">Destaque</span></h2>
+        <p class="section-subtitle">Soluções desenvolvidas aplicando teoria à prática, com foco em arquitetura Cloud e Back-end robusto.</p>
+        
+        <div class="grid-container">
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Federados App</p>
+                    <span class="icon-container"><i class="fa-solid fa-graduation-cap"></i></span>
+                </div>
+                <p class="tile-content">Desenvolvimento de uma rede social exclusiva para estudantes de universidades federais. O back-end está sendo estruturado do zero utilizando Java e Spring Boot, com arquitetura baseada em API REST e integração com infraestrutura de nuvem da AWS para garantir escalabilidade.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Project Zenith</p>
+                    <span class="icon-container"><i class="fa-solid fa-brain"></i></span>
+                </div>
+                <p class="tile-content">Desenvolvimento de uma aplicação web robusta utilizando Java e Spring Boot para a estruturação do back-end, integrada com Python para a execução de processos de análise automatizada (Mental Mapper), estruturada para o ambiente de nuvem.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Sistema Bancário</p>
+                    <span class="icon-container"><i class="fa-solid fa-building-columns"></i></span>
+                </div>
+                <p class="tile-content">Construção de uma aplicação para cadastro e operações financeiras (simulação bancária), desenvolvida com Spring Boot e API REST, utilizando serviços de nuvem da AWS para hospedagem e processamento.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">APIs de Gerenciamento</p>
+                    <span class="icon-container"><i class="fa-solid fa-network-wired"></i></span>
+                </div>
+                <p class="tile-content">Criação de APIs RESTful em Java com Spring Boot para Tarefas e Usuários, implementando operações CRUD, regras de negócio estruturadas, segurança via autenticação JWT e persistência de dados.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Algoritmos de Compressão</p>
+                    <span class="icon-container"><i class="fa-solid fa-file-zipper"></i></span>
+                </div>
+                <p class="tile-content">Implementação acadêmica dos algoritmos LZW e zlib em arquivos de texto com foco em análise de desempenho computacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2 class="section-title">Habilidades <span class="highlight">Técnicas</span></h2>
+        <p class="section-subtitle">Principais tecnologias e metodologias utilizadas no desenvolvimento diário.</p>
+        
+        <div class="grid-container">
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Linguagens</p>
+                    <span class="icon-container"><i class="fa-solid fa-code"></i></span>
+                </div>
+                <p class="tile-content">Java, Python, JavaScript, SQL e Solidity. Forte base em Programação Orientada a Objetos e lógica.</p>
+            </div>
+            
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Nuvem & DevOps</p>
+                    <span class="icon-container"><i class="fa-brands fa-aws"></i></span>
+                </div>
+                <p class="tile-content">Ampla experiência com serviços AWS (EC2, Lambda, S3), conteinerização com Docker, controle de versão via Git/GitHub e Postman.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Frameworks & Web</p>
+                    <span class="icon-container"><i class="fa-solid fa-layer-group"></i></span>
+                </div>
+                <p class="tile-content">Especialidade no ecossistema Spring Boot. Construção de RESTful APIs, implementação de Autenticação JWT e integração com banco de dados.</p>
+            </div>
+
+            <div class="tile">
+                <div class="title-container">
+                    <p class="main-title">Banco de Dados</p>
+                    <span class="icon-container"><i class="fa-solid fa-database"></i></span>
+                </div>
+                <p class="tile-content">Modelagem e gerenciamento de bancos relacionais robustos, utilizando principalmente MySQL e PostgreSQL.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacao">
+        <h2 class="section-title">Formação & <span class="highlight">Certificações</span></h2>
+        
+        <div class="text-block">
+            <h3>Universidade Federal Rural de Pernambuco (UFRPE)</h3>
+            <p><strong>Engenharia da Computação</strong> | 2024 - 2028</p>
+            <p style="margin-top: 10px;">Progresso atual: 53% concluído (1.695 horas englobando atividades obrigatórias, optativas e complementares).</p>
+        </div>
+
+        <div class="text-block">
+            <h3>Especializações e Bootcamps</h3>
+            <ul>
+                <li>Oracle Next Education F2 T7 - Back-end (ONE - Alura, 331h)</li>
+                <li>Inteligência Artificial aplicada à Visão Computacional (FACTI, 240h)</li>
+                <li>Bootcamp Decola Tech Avanade 2025 (DIO, 67h)</li>
+                <li>Java Programação Orientada a Objetos + Projetos (Udemy, 54h)</li>
+            </ul>
+        </div>
+
+        <div class="text-block">
+            <h3>Idiomas</h3>
+            <p><strong>Português:</strong> Nativo | <strong>Inglês:</strong> Avançado | <strong>Espanhol:</strong> Intermediário | <strong>Francês:</strong> Básico</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido com <i class="fa-solid fa-code" style="color: var(--accent-green);"></i> por José Rodrigo Araujo Limeira &copy; 2026</p>
+        <p style="font-size: 16px; margin-top: 10px;">Belo Jardim, Pernambuco, Brasil</p>
+    </footer>
+
+</body>
+</html>
