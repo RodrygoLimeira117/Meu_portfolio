@@ -5,7 +5,7 @@ Este repositório contém o código-fonte do meu portfólio pessoal, desenvolvid
 O projeto foi pensado com foco em design limpo, responsividade e boa organização de código, funcionando corretamente tanto em desktop quanto em dispositivos móveis.
 
 🔗 Acesse o portfólio online:
-https://portifoliorodrigolimeira.vercel.app/
+https://rodrigo-limeira.vercel.app/
 
 🧠 Sobre mim
 
